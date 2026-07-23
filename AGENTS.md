@@ -16,6 +16,7 @@ Toutes les ressources IA sont centralisées dans `.ai/` :
 
 ## Règles obligatoires
 
+0. **Cold start** : à la première session sur un projet, analyser la codebase et documenter dans `.ai/context/` avant toute tâche. Voir `.ai/rules/cold-start.md`.
 1. **Lire `.ai/rules/`** avant toute modification de code.
 2. **Consulter `.ai/context/`** pour comprendre l'architecture et les décisions techniques.
 3. **Utiliser les skills** de `.ai/skills/` quand un cas d'usage correspond.
@@ -30,6 +31,7 @@ Toutes les ressources IA sont centralisées dans `.ai/` :
 | Règle | Rôle |
 |-------|------|
 | `auto-plan-mode.md` | Détecte la complexité du prompt, propose un plan si besoin |
+| `cold-start.md` | Analyser et documenter la codebase à la première session |
 | `ponytail.md` | Anti-over-engineering (échelle de paresse) |
 | `read-before-write.md` | Lire fichier + voisins avant d'éditer |
 | `anti-hallucination.md` | Vérifier qu'une API/fonction existe avant de l'invoquer |
