@@ -14,6 +14,18 @@ Toutes les ressources IA sont centralisées dans `.ai/` :
 | `.ai/plugins/` | Configuration des extensions et MCP servers |
 | `.ai/context/` | Documentation de contexte : architecture, décisions, glossaire |
 
+## Démarrage de session (obligatoire)
+
+**Avant toute réponse ou action**, à chaque nouvelle session (même si la question semble triviale) :
+
+1. **Lire `MEMORY.md`** à la racine — journal court-terme, dernière session et "prochaine étape".
+2. **Lire `.ai/memory/progress.md`** — avancement par workstream, tâches cochées, blocages.
+3. **Si décision archi en jeu** → lire `.ai/memory/decisions.md`.
+4. **Si leçon pertinente** → lire `.ai/memory/learnings.md`.
+5. Identifier la dernière session et la "prochaine étape" à reprendre, puis confirmer avec l'utilisateur avant de repartir.
+
+C'est ce qui remplace l'index de codebase + l'historique de chat de Cursor. Sans cette lecture, l'agent perd le contexte du travail précédent. Voir `.ai/rules/memory.md`.
+
 ## Règles obligatoires
 
 0. **Cold start** : à la première session sur un projet, analyser la codebase et documenter dans `.ai/context/` avant toute tâche. Voir `.ai/rules/cold-start.md`.
@@ -23,6 +35,7 @@ Toutes les ressources IA sont centralisées dans `.ai/` :
 4. **Respecter les conventions** de commit, de nommage et de test définies dans les rules.
 5. **Déclenchement contextuel** : voir `.ai/rules/scoped-rules.md` pour savoir quelles règles s'appliquent selon les fichiers touchés.
 6. **Vérifier la doc via Context7** : pour tout sujet concernant une librairie, framework, ou API, utiliser `context7` (`use context7` dans le prompt ou l'outil MCP `context7`) pour récupérer la doc à jour avant d'écrire du code. Ne pas se fier aux connaissances d'entraînement seules — elles peuvent être obsolètes ou hallucinées. Voir `.ai/plugins/context7.md`.
+7. **Goal mode pour tâches longues** : pour les refactorings, migrations, reviews, ou fix de tests, utiliser `/goal <objective>` du plugin `@prevalentware/opencode-goal-plugin`. Le goal reste visible, survit à la compaction, et ne se ferme qu'avec evidence ou blocker. Voir `.ai/plugins/opencode-goal-plugin.md`.
 
 ## Règles disponibles
 

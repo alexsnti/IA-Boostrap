@@ -32,6 +32,9 @@ Ce fichier suit l'avancement des travaux en cours, organisé par workstream.
   - [x] Règle match-existing-conventions
   - [x] Règle scoped-rules
   - [x] Système de mémoire hybride
+  - [x] Plugin context7 (doc MCP)
+  - [x] Plugin opencode-goal-plugin (goal mode Codex-style)
+  - [x] Renforcement lecture mémoire au démarrage (AGENTS.md + memory.md)
   - [ ] Rules framework (TS/React/Python selon stack cible)
   - [ ] Context : architecture.md, glossaire.md
   - [ ] Fichiers de compatibilité (`.cursorrules`, `.clinerules`, etc.)

@@ -11,5 +11,12 @@ Chaque configuration est un fichier JSON ou markdown nommé `<plugin>.md` (ou `<
 
 ## Plugins disponibles
 
-<!-- Ajouter ici les plugins au fur et à mesure -->
-_À compléte_
+| Plugin | Rôle |
+|--------|------|
+| [context7.md](context7.md) | Doc à jour pour LLMs via MCP |
+| [superpowers.md](superpowers.md) | Méthodologie de dev complète pour agents IA |
+| [opencode-goal-plugin.md](opencode-goal-plugin.md) | Goal mode Codex-style pour OpenCode |
+| [vercel-mcp.md](vercel-mcp.md) | Vercel MCP server |
+| [ponytail.md](ponytail.md) | Anti-over-engineering |
+| [avoid-ai-writing.md](avoid-ai-writing.md) | Audit anti AI-isms |
+| [skillspector.md](skillspector.md) | Scanner de sécurité des skills |

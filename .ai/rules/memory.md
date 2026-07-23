@@ -4,12 +4,18 @@
 
 L'agent IA doit maintenir une mémoire cross-session pour ne pas perdre le contexte entre les sessions.
 
-### Au démarrage d'une session
+### Au démarrage d'une session (OBLIGATOIRE, avant toute action)
 
-1. Lire `MEMORY.md` à la racine du projet.
-2. Lire `.ai/memory/progress.md` pour connaître l'avancement en cours.
-3. Si des décisions architecturales sont en jeu, lire `.ai/memory/decisions.md`.
-4. Identifier la dernière session et la "prochaine étape" à reprendre.
+Cette lecture est **non-négociable**. Sans elle, l'agent repart de zéro et perd tout le travail précédent — c'est l'équivalent de l'historique de chat + l'index de codebase que Cursor a nativement.
+
+1. **Lire `MEMORY.md`** à la racine du projet — dernière session, "prochaine étape", learnings récents.
+2. **Lire `.ai/memory/progress.md`** — avancement par workstream, tâches cochées, blocages.
+3. Si des décisions architecturales sont en jeu → lire `.ai/memory/decisions.md`.
+4. Si le sujet touche à un learning précédent → lire `.ai/memory/learnings.md`.
+5. Identifier la dernière session et la "prochaine étape" à reprendre.
+6. **Confirmer avec l'utilisateur** avant de repartir : « Dernière session : X. Prochaine étape : Y. Je reprends sur Y ? »
+
+Ne pas sauter cette étape même si la question paraît triviale — c'est exactement dans ces cas qu'on oublie qu'on a déjà fait le travail.
 
 ### Pendant la session
 
